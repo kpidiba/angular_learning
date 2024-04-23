@@ -12,17 +12,23 @@
 
 - [ng-conf - YouTube](https://www.youtube.com/@ngconfonline) 
 
-- https://www.youtube.com/@JoshuaMorony  
-
 - https://www.youtube.com/@DecodedFrontend 
-
-- https://www.youtube.com/@ZoaibKhan 
 
 - [Angularistic - YouTube](https://www.youtube.com/@angularistic) 
 
 - [Angular University - YouTube](https://www.youtube.com/@AngularUniversity) 
 
 - https://dyma.fr/developer/list/chapters/core (Learning course)
+
+- [Nihira Techiees - YouTube](https://www.youtube.com/@NihiraTechiees)
+
+- [Academind - YouTube]([Academind - YouTube](https://www.youtube.com/@academind))
+- [Sahosoft Solutions](https://www.youtube.com/@sahosoftsolutions2343)
+
+- [OctAcademy - YouTube](https://www.youtube.com/@OctAcademy)
+- [Arthur Lannelucq - YouTube](https://www.youtube.com/@ArthurLannelucq)
+- [NG Poland Conf - YouTube](https://www.youtube.com/@ngPolandConf) (Angular Conf News Ng Poland Conf)
+- [LEARNING PARTNER - YouTube](https://www.youtube.com/@LearningPartnerDigital) (Projects)
 
 ### TEMPLATES
 
@@ -31,6 +37,12 @@
 - https://flowbite.com/ 
 
 - [The most popular admin dashboard based on Angular 9+ and Nebular.](https://akveo.github.io/ngx-admin/material) 
+
+- [Angular](https://angular.io/guide)
+- [8 Top-Class Free Angular Templates 2023 - AdminLTE.IO](https://adminlte.io/blog/free-angular-templates/)
+- [Best 10+ Angular Material Admin Template Free 2024 - ThemeSelection](https://themeselection.com/angular-material-admin-template-free/)
+- [GitHub - trungvose/jira-clone-angular: A simplified Jira clone built with Angular, ng-zorro and Akita](https://github.com/trungvose/jira-clone-angular)
+- [GitHub - akveo/ngx-admin: Customizable admin dashboard template based on Angular 10+](https://github.com/akveo/ngx-admin)
 
 ### DESCRIPTION
 
@@ -45,6 +57,16 @@
 - **nvm use** **12.18.3**
 
 - **nvm list available** 
+
+### CREATE PROJECT
+
+```js
+ng new project_name
+or
+ng new myProject --skip-install=true
+cd myProject
+npm install
+```
 
 ## MIGRATION WEBSITE
 
@@ -89,37 +111,6 @@ Certainly, Angular is a comprehensive framework for building dynamic web applica
 17. **Animations**: Angular provides a powerful animation system to create smooth transitions and effects in your application.
 
 18. **State Management**: While not a core Angular concept, many Angular applications use libraries like NgRx or Akita for managing application state in a more controlled manner
-
-### RESSOURCES
-
-1. **YOUTUBE**
-   
-   - [Nihira Techiees - YouTube](https://www.youtube.com/@NihiraTechiees)
-   - [Academind - YouTube](https://www.youtube.com/@academind) 
-   - [Sahosoft Solutions](https://www.youtube.com/@sahosoftsolutions2343) 
-   - [Monsterlessons Academy - YouTube](https://www.youtube.com/@MonsterlessonsAcademy) (top)
-   - [OctAcademy - YouTube](https://www.youtube.com/@OctAcademy) 
-   - https://www.youtube.com/@ArthurLannelucq
-   - [NG Poland Conf - YouTube](https://www.youtube.com/@ngPolandConf)  (Angular Conf News Ng Poland Conf)
-   - https://www.youtube.com/@LearningPartnerDigital (Projects)
-
-2. **WEBSITE**
-   
-   - [Angular](https://angular.io/guide)
-   - [8 Top-Class Free Angular Templates 2023 - AdminLTE.IO](https://adminlte.io/blog/free-angular-templates/) 
-   - https://themeselection.com/angular-material-admin-template-free/ 
-   - [GitHub - trungvose/jira-clone-angular: A simplified Jira clone built with Angular, ng-zorro and Akita](https://github.com/trungvose/jira-clone-angular) 
-   - https://github.com/akveo/ngx-admin 
-
-### CREATE PROJECT
-
-```js
-ng new project_name
-or
-ng new myProject --skip-install=true
-cd myProject
-npm install
-```
 
 ### CONCEPTS
 
