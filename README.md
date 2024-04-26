@@ -1,10 +1,14 @@
 # ANGULAR
 
+### DESCRIPTION
+
+**Angular** (communément appelé « **Angular 2+ »** ou « **Angular v2 et plus »**)[2](https://fr.wikipedia.org/wiki/Angular#cite_note-2),[3](https://fr.wikipedia.org/wiki/Angular#cite_note-3) est un *[framework](https://fr.wikipedia.org/wiki/Framework "Framework")* pour clients, [open source](https://fr.wikipedia.org/wiki/Open_source "Open source"), basé sur [TypeScript](https://fr.wikipedia.org/wiki/TypeScript "TypeScript") et codirigé par l'équipe du projet « Angular » chez [Google](https://fr.wikipedia.org/wiki/Google "Google") ainsi que par une communauté de particuliers et de sociétés. Angular est une réécriture complète d'[AngularJS](https://fr.wikipedia.org/wiki/AngularJS "AngularJS"), [cadriciel](https://fr.wikipedia.org/wiki/Cadriciel "Cadriciel") construit par la même équipe. Il permet la création d’applications Web et plus particulièrement d'[applications Web monopages](https://fr.wikipedia.org/wiki/Application_web_monopage "Application web monopage") : des applications Web accessibles via une page Web unique qui permet de fluidifier l’expérience utilisateur et d’éviter les chargements de pages à chaque nouvelle action. Le *framework* est basé sur une architecture du type [MVC](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur "Modèle-vue-contrôleur") et permet donc de séparer les données, le visuel et les actions pour une meilleure gestion des responsabilités. Un type d’architecture qui a largement fait ses preuves et qui permet une forte maintenabilité et une amélioration du travail collaboratif.
+
 ### RESSOURCES
 
-- [Zoaib Khan - YouTube](https://www.youtube.com/@ZoaibKhan)
+- [Zoaib Khan - YouTube](https://www.youtube.com/@ZoaibKhan) 
 
-- [Simon Dieny - Code Senior - YouTube](https://www.youtube.com/@codeursenior)
+- [Simon Dieny - Code Senior - YouTube](https://www.youtube.com/@codeursenior) 
 
 - [Monsterlessons Academy - YouTube](https://www.youtube.com/@MonsterlessonsAcademy) 
 
@@ -14,21 +18,27 @@
 
 - https://www.youtube.com/@DecodedFrontend 
 
-- [Angularistic - YouTube](https://www.youtube.com/@angularistic) 
+- [Angularistic - YouTube](https://www.youtube.com/@angularistic)  
 
 - [Angular University - YouTube](https://www.youtube.com/@AngularUniversity) 
 
-- https://dyma.fr/developer/list/chapters/core (Learning course)
+- https://dyma.fr/developer/list/chapters/core (Learning course) 
 
-- [Nihira Techiees - YouTube](https://www.youtube.com/@NihiraTechiees)
+- [Nihira Techiees - YouTube](https://www.youtube.com/@NihiraTechiees) 
 
-- [Academind - YouTube]([Academind - YouTube](https://www.youtube.com/@academind))
-- [Sahosoft Solutions](https://www.youtube.com/@sahosoftsolutions2343)
+- [Academind - YouTube]([Academind - YouTube](https://www.youtube.com/@academind)) 
 
-- [OctAcademy - YouTube](https://www.youtube.com/@OctAcademy)
-- [Arthur Lannelucq - YouTube](https://www.youtube.com/@ArthurLannelucq)
+- [Sahosoft Solutions](https://www.youtube.com/@sahosoftsolutions2343) 
+
+- [OctAcademy - YouTube](https://www.youtube.com/@OctAcademy) 
+
+- [Arthur Lannelucq - YouTube](https://www.youtube.com/@ArthurLannelucq) 
+
 - [NG Poland Conf - YouTube](https://www.youtube.com/@ngPolandConf) (Angular Conf News Ng Poland Conf)
+
 - [LEARNING PARTNER - YouTube](https://www.youtube.com/@LearningPartnerDigital) (Projects)
+
+- [Let's Program - YouTube](https://www.youtube.com/@letsprogram30) 
 
 ### TEMPLATES
 
@@ -39,14 +49,14 @@
 - [The most popular admin dashboard based on Angular 9+ and Nebular.](https://akveo.github.io/ngx-admin/material) 
 
 - [Angular](https://angular.io/guide)
+
 - [8 Top-Class Free Angular Templates 2023 - AdminLTE.IO](https://adminlte.io/blog/free-angular-templates/)
+
 - [Best 10+ Angular Material Admin Template Free 2024 - ThemeSelection](https://themeselection.com/angular-material-admin-template-free/)
+
 - [GitHub - trungvose/jira-clone-angular: A simplified Jira clone built with Angular, ng-zorro and Akita](https://github.com/trungvose/jira-clone-angular)
+
 - [GitHub - akveo/ngx-admin: Customizable admin dashboard template based on Angular 10+](https://github.com/akveo/ngx-admin)
-
-### DESCRIPTION
-
-**Angular** (communément appelé « **Angular 2+ »** ou « **Angular v2 et plus »**)[2](https://fr.wikipedia.org/wiki/Angular#cite_note-2),[3](https://fr.wikipedia.org/wiki/Angular#cite_note-3) est un *[framework](https://fr.wikipedia.org/wiki/Framework "Framework")* pour clients, [open source](https://fr.wikipedia.org/wiki/Open_source "Open source"), basé sur [TypeScript](https://fr.wikipedia.org/wiki/TypeScript "TypeScript") et codirigé par l'équipe du projet « Angular » chez [Google](https://fr.wikipedia.org/wiki/Google "Google") ainsi que par une communauté de particuliers et de sociétés. Angular est une réécriture complète d'[AngularJS](https://fr.wikipedia.org/wiki/AngularJS "AngularJS"), [cadriciel](https://fr.wikipedia.org/wiki/Cadriciel "Cadriciel") construit par la même équipe. Il permet la création d’applications Web et plus particulièrement d'[applications Web monopages](https://fr.wikipedia.org/wiki/Application_web_monopage "Application web monopage") : des applications Web accessibles via une page Web unique qui permet de fluidifier l’expérience utilisateur et d’éviter les chargements de pages à chaque nouvelle action. Le *framework* est basé sur une architecture du type [MVC](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur "Modèle-vue-contrôleur") et permet donc de séparer les données, le visuel et les actions pour une meilleure gestion des responsabilités. Un type d’architecture qui a largement fait ses preuves et qui permet une forte maintenabilité et une amélioration du travail collaboratif.
 
 ### ANGULAR LAST VERSION
 
