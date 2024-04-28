@@ -56,7 +56,15 @@
 
 - [GitHub - trungvose/jira-clone-angular: A simplified Jira clone built with Angular, ng-zorro and Akita](https://github.com/trungvose/jira-clone-angular)
 
-- [GitHub - akveo/ngx-admin: Customizable admin dashboard template based on Angular 10+](https://github.com/akveo/ngx-admin)
+- [GitHub - akveo/ngx-admin: Customizable admin dashboard template based on Angular 10+](https://github.com/akveo/ngx-admin) 
+
+- [GitHub - ng-matero/ng-matero: Angular Material admin dashboard template.](https://github.com/ng-matero/ng-matero) 
+
+- https://akveo.github.io/ngx-admin/ 
+
+- https://primeng.org/templates
+
+- https://github.com/codedthemes/gradient-able-free-admin-template 
 
 ### ANGULAR LAST VERSION
 
