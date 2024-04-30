@@ -40,6 +40,8 @@
 
 - [Let's Program - YouTube](https://www.youtube.com/@letsprogram30) 
 
+- https://www.youtube.com/@GaetanRouzies (French)
+
 ### TEMPLATES
 
 - https://therichpost.com/ 
