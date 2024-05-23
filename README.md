@@ -4,6 +4,17 @@
 
 **Angular** (communément appelé « **Angular 2+ »** ou « **Angular v2 et plus »**)[2](https://fr.wikipedia.org/wiki/Angular#cite_note-2),[3](https://fr.wikipedia.org/wiki/Angular#cite_note-3) est un *[framework](https://fr.wikipedia.org/wiki/Framework "Framework")* pour clients, [open source](https://fr.wikipedia.org/wiki/Open_source "Open source"), basé sur [TypeScript](https://fr.wikipedia.org/wiki/TypeScript "TypeScript") et codirigé par l'équipe du projet « Angular » chez [Google](https://fr.wikipedia.org/wiki/Google "Google") ainsi que par une communauté de particuliers et de sociétés. Angular est une réécriture complète d'[AngularJS](https://fr.wikipedia.org/wiki/AngularJS "AngularJS"), [cadriciel](https://fr.wikipedia.org/wiki/Cadriciel "Cadriciel") construit par la même équipe. Il permet la création d’applications Web et plus particulièrement d'[applications Web monopages](https://fr.wikipedia.org/wiki/Application_web_monopage "Application web monopage") : des applications Web accessibles via une page Web unique qui permet de fluidifier l’expérience utilisateur et d’éviter les chargements de pages à chaque nouvelle action. Le *framework* est basé sur une architecture du type [MVC](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur "Modèle-vue-contrôleur") et permet donc de séparer les données, le visuel et les actions pour une meilleure gestion des responsabilités. Un type d’architecture qui a largement fait ses preuves et qui permet une forte maintenabilité et une amélioration du travail collaboratif.
 
+## CONTENT
+
+- [**INSTALL SOME LIBRARY**](./add library/README.md) 
+- [**STANDALONE**](./angular_standalone/readme.md)
+- [**ARCHITECTURE**](./architecture/readme.md) 
+- [**BUGS**](./bugs) 
+- [**CROSS ORIGIN**](./cross_origin/readme.md) 
+- [**ELECTRON**](./electron/readme.md) 
+- [**SIGNALS**](./signals/readme.md)
+- [**TYPESCRIPT**](./typescript/readme.md) 
+
 ### RESSOURCES
 
 - [Zoaib Khan - YouTube](https://www.youtube.com/@ZoaibKhan) 
@@ -212,7 +223,7 @@ The application project files are placed in the in the src/ folder of
  the workspace. The src/ folder contains the source files for the root 
 application. Let’s now look at the content of the src/ folder
 
-**app/** – this folder contains the where the application logic and data are defined. Discussed below
+**app/** – this folder contains the where the application logic and data are defined. 
 
 **assets/** – this folder contains assets including images used by the application
 
@@ -605,33 +616,33 @@ dd MMMM yyyy: 15 Mars 2003
 
 In summary, `ngOnInit` is called once during component initialization and is typically used for component initialization tasks, while `ngAfterViewInit` is called after the component's view is fully rendered and is often used for manipulating the DOM or interacting with child components.
 
-### ANGULAR SERVICES
+### Angular Services
 
-we use angular services to share data among components whether there is relationship between components or not ....
+Angular services are utilized to share data among components, whether there is a relationship between components or not.
 
-- **create services manual**
-
-- create folder Services and create file post.service.ts
+- **Manually Creating Services:**
+  
+  - Create a folder named `services` and within it, create a file named `post.service.ts`.
 
 ```ts
-export class PostService{
-    postList : Array<any> = [{}];
+export class PostService {
+    postList: Array<any> = [{}];
 }
 
-
-
-constructor(private postService:PostService) {
-    this.pots = postService.postList;
-  }
+constructor(private postService: PostService) {
+    this.posts = postService.postList;
+}
 ```
 
-- create service with angular cli
+- **Creating Services with Angular CLI:**
+  
+  - Generate a service using Angular CLI with the following command:
 
 ```ts
-ng g s services/service_name
+ng generate service services/service_name
 ```
 
-### GUARDS COMMAND
+## GUARDS COMMAND
 
 Angular route guards are interfaces provided by Angular which, when implemented, **allow us to control the accessibility of a route based on conditions provided in class implementation of that interface**. Here are some types of Angular guards: CanActivate, CanActivateChild, CanLoad, CanDeactivate and Resolve.
 

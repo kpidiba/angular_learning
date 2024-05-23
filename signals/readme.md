@@ -1,6 +1,9 @@
 # SIGNALS
 
-documentation:  https://angular.io/guide/signals 
+### RESSOURCES
+
+- [Angular signals](https://angular.io/guide/signals) 
+- [Angular signals vs. observables: How and when to use each - LogRocket Blog](https://blog.logrocket.com/angular-signals-vs-observables/) 
 
 First, continue to use event handlers in a component as you do now for user actions. Actions such as a selection from a drop down list, a click on a button, or an entry in a textbox.
 
@@ -34,22 +37,13 @@ To gain a better understanding of these requests, we must first
 digress a little bit, explaining a fundamental concept of Angular: [change detection](https://angular.io/guide/change-detection).  
 At the time of writing the framework uses a library called *zone.js* to control the various changes of state inside the application.
 
-*Zone.js* tracks all the browser’s events and every time it 
-sees that something has changed, it starts a change detection cycle, in 
-which it checks the components tree of the app to see if something has 
-been modified, updating the views that need to be updated. On the one 
-hand, this behavior is extremely useful because it automatically manages
- these checks, on the other hand, it underperforms because it constantly
+*Zone.js* tracks all the browser’s events and every time it sees that something has changed, it starts a change detection cycle, in which it checks the components tree of the app to see if something has been modified, updating the views that need to be updated. On the one hand, this behavior is extremely useful because it automatically manages these checks, on the other hand, it underperforms because it constantly
  checks **all** of the components, sometimes even when there is no need to update anything.
 
 ![zone.js change detection gif](https://tech.sparkfabrik.com/images/content/angular-signals/zone_bg.gif "zone.js change detection gif")
 
-An alternative strategy can be to use *zone.js with OnPush* in
- every component. This makes it so that the component that uses it is 
-not checked during a change detection cycle unless explicitly marked 
-with the `markForCheck()` function.  
-This behavior may seem similar to the one before, but the main difference is that `markForCheck()` doesn’t automatically trigger the change detection for its component, 
-but it just marks it to be checked on the next change detection cycle 
+An alternative strategy can be to use *zone.js with OnPush* inevery component. This makes it so that the component that uses it is not checked during a change detection cycle unless explicitly marked with the `markForCheck()` function.  
+This behavior may seem similar to the one before, but the main difference is that `markForCheck()` doesn’t automatically trigger the change detection for its component, but it just marks it to be checked on the next change detection cycle 
 scheduled by zone.js .  
 The downside to this strategy is that it marks not just the component that raised the `markForCheck()` flag, but **also its parent nodes**. So we have fewer components checked than before, but there is still some, let’s say over-checking spillage.
 
@@ -93,32 +87,15 @@ know what observables are.
 
 ### What is an observable?
 
-An [observable](https://rxjs.dev/guide/observable) is a collection of objects which can be observed in time, they are part of alibrary called [RxJS](https://rxjs.dev/guide/overview) which is often used in tandem with the Angular framework to manage 
-asynchronous events. Unlike a normal array it does not keep memory of 
+An [observable](https://rxjs.dev/guide/observable) is a collection of objects which can be observed in time, they are part of alibrary called [RxJS](https://rxjs.dev/guide/overview) which is often used in tandem with the Angular framework to manage asynchronous events. Unlike a normal array it does not keep memory of 
 the elements, it just emits them.  
-To get a silly visual aid: we can imagine an observable as a fast food 
-employee manning the drive-through window: it just knows that it has to 
-deliver bags of objects to consumers as time passes, in an uninterrupted
- line of customers that go by during the day.
+To get a silly visual aid: we can imagine an observable as a fast food employee manning the drive-through window: it just knows that it has to deliver bags of objects to consumers as time passes, in an uninterrupted line of customers that go by during the day.
 
 ![observable as a drive through employee delivering data object to consumer](https://tech.sparkfabrik.com/images/content/angular-signals/drive_through.png "observable as a drive through employee delivering data object to consumer")
 
-As much as they can work with synchronous data, observables shine in 
-working with asynchronous events (clicking on keyboard keys, mouse 
-clicks, HTTP calls responses) or notifications (a completed or failed 
-process). But they are not perfect, as observables require a manual 
-subscription, and of course a manual un-subscription. Moreover, the data
- is not readily available but has to be extracted from the emitted 
-values stream first.
-On the other hand, signals don’t need a manual subscription, or more 
-precisely, they have an implicit quasi-subscription automatically 
-managed when a consumer starts listening to a signal’s value.
-In addition, a signal can be called and read directly, immediately 
-obtaining the value it encapsulates.
-These may seem like minor differences, but for *simpler* actions 
-signals require much less code and, more importantly, less RxJS 
-experience, which can be extremely powerful but also really difficult 
-for new (and even not-so-new) devs.
+As much as they can work with synchronous data, observables shine in working with asynchronous events (clicking on keyboard keys, mouse clicks, HTTP calls responses) or notifications (a completed or failed process). But they are not perfect, as observables require a manual subscription, and of course a manual un-subscription. Moreover, the data is not readily available but has to be extracted from the emitted 
+values stream first On the other hand, signals don’t need a manual subscription, or more precisely, they have an implicit quasi-subscription automatically managed when a consumer starts listening to a signal’s value.In addition, a signal can be called and read directly, immediately obtaining the value it encapsulates.
+These may seem like minor differences, but for *simpler* actions signals require much less code and, more importantly, less RxJS experience, which can be extremely powerful but also really difficult for new (and even not-so-new) devs.
 
 ## Are we going to use only signals?
 
@@ -127,27 +104,12 @@ Well, it depends.
 
 ![it depends oranges apples meme](https://tech.sparkfabrik.com/images/content/angular-signals/it_depends.jpg "it depends oranges apples meme")
 
-If you need to observe (no pun intended) values that change with 
-time, without knowing when they do change, so asynchronously, you will 
-be better off using observables. Instead, if time isn’t something you 
-need to keep in the equation, you will need only signals, which are 
-simpler to use.
-Realistically, in the future, we will most likely use signals for most 
-use cases, and only in some particular circumstances we will need all 
-the power of observables.
+If you need to observe (no pun intended) values that change with time, without knowing when they do change, so asynchronously, you will be better off using observables. Instead, if time isn’t something you need to keep in the equation, you will need only signals, which are simpler to use.
+Realistically, in the future, we will most likely use signals for most use cases, and only in some particular circumstances we will need all the power of observables.
 
-Having reflected upon these differences, you can see how titles that 
-claim that the end of RxJS in favor of signals is imminent are just 
-click-bait. It’s just a matter of knowing when to use the right tool for
- the right job.
+Having reflected upon these differences, you can see how titles that claim that the end of RxJS in favor of signals is imminent are just click-bait. It’s just a matter of knowing when to use the right tool for the right job.
 More so, the RxJS team, seeing the big picture, has already implemented 
-two functions that allow the [interoperability between signals and observables](https://angular.io/api/core/rxjs-interop): `toObservable()`and `toSignal()`, allowing the 
-management of complex data flux or asynchronous data without having to 
-give up the usage of signals.
-I want to highlight this point, as I think it’s one of the key concepts 
-of Angular and its libraries: to always allow retro compatibility, 
-letting new and old functionalities live side-by-side without the risk 
-of breaking anything, which is not to be taken for granted. So let’s 
+two functions that allow the [interoperability between signals and observables](https://angular.io/api/core/rxjs-interop): `toObservable()`and `toSignal()`, allowing the management of complex data flux or asynchronous data without having to give up the usage of signals.I want to highlight this point, as I think it’s one of the key concepts of Angular and its libraries: to always allow retro compatibility, letting new and old functionalities live side-by-side without the risk of breaking anything, which is not to be taken for granted. So let’s 
 keep feuds to important matters, like if you can add heavy cream to a 
 carbonara sauce (pro tip: never).
 
@@ -392,7 +354,7 @@ No doubt that Angular is growing into a beautiful framework allowing developers 
 
 Un **effet** est une opération qui s’exécute lorsqu’une ou plusieurs valeurs de signal changent. Il est possible de **créer un effet** via la fonction `effect` :
 
-```
+```ts
 effect(() => {
   console.log(`The current count is: ${count()}`);
 });
@@ -404,8 +366,6 @@ Chaque fois qu’une des valeurs de signal change, l’effet **s’exécute en a
  De plus, les effets gardent une trace de leurs dépendances de façon 
 dynamique et ils ne suivent que les signaux lus pendant l’exécution. Ces
  effets s’exécutent toujours de **manière asynchrone** lors du processus de détection des modifications.
-
-
 
 ### Use cases for effects
 
@@ -423,29 +383,3 @@ circumstances. Here are some examples of situations where an `[effect](https://a
 Avoid using effects for propagation of state changes. This can result in `ExpressionChangedAfterItHasBeenChecked` errors, infinite circular updates, or unnecessary change detection cycles.
 
 Because of these risks, setting signals is disallowed by default in effects, but can be enabled if absolutely necessary.
-
-### Injection context
-
-By default, registering a new effect with the `[effect](https://angular.io/api/core/effect)()` function requires an [injection context](https://angular.io/guide/dependency-injection-context) (access to the `inject` function). The easiest way to provide this is to call `[effect](https://angular.io/api/core/effect)` within a component, directive, or service `constructor`:
-
-      ``@[Component](https://angular.io/api/core/Component)({...}) export class EffectiveCounterCmp {   readonly count = [signal](https://angular.io/api/core/signal)(0);   constructor() {     // Register a new effect.     [effect](https://angular.io/api/core/effect)(() => {       console.log(`The count is: ${this.count()})`);     });   } }``
-
-Alternatively, the effect can be assigned to a field (which also gives it a descriptive name).
-
-      ``@[Component](https://angular.io/api/core/Component)({...}) export class EffectiveCounterCmp {   readonly count = [signal](https://angular.io/api/core/signal)(0);     private loggingEffect = [effect](https://angular.io/api/core/effect)(() => {     console.log(`The count is: ${this.count()})`);   }); }``
-
-To create an effect outside of the constructor, you can pass an `[Injector](https://angular.io/api/core/Injector)` to `[effect](https://angular.io/api/core/effect)` via its options:
-
-      ``@[Component](https://angular.io/api/core/Component)({...}) export class EffectiveCounterCmp {   readonly count = [signal](https://angular.io/api/core/signal)(0);   constructor(private injector: [Injector](https://angular.io/api/core/Injector)) {}    initializeLogging(): void {     [effect](https://angular.io/api/core/effect)(() => {       console.log(`The count is: ${this.count()})`);     }, {injector: this.injector});   } }``
-
-### Destroying effects
-
-When you create an
- effect, it is automatically destroyed when its enclosing context is 
-destroyed. This means that effects created within components are 
-destroyed when the component is destroyed. The same goes for effects 
-within directives, services, etc.
-
-Effects return an `[EffectRef](https://angular.io/api/core/EffectRef)` that can be used to destroy them manually, via the `.destroy()` operation. This can also be combined with the `manualCleanup` option to create an effect that lasts until it is manually destroyed. 
-Be careful to actually clean up such effects when they're no longer 
-required.

@@ -12,7 +12,6 @@
 
 ```bash
 npm i bootstrap@5.2.3
-npm i @popperjs/core
 ```
 
 #### we just need to add below code into angular.json file on top:
@@ -200,7 +199,7 @@ this.toastrService.error('everything is broken', 'Major Error', {
 });
 ```
 
-### [](https://www.npmjs.com/package/ngx-toastr#global-options)Global Options
+### [Global Options](https://www.npmjs.com/package/ngx-toastr#global-options)
 
 All [individual options](https://www.npmjs.com/package/ngx-toastr#individual-options) can be overridden in the global
 options to affect all toasts. In addition, global options include the following
@@ -216,7 +215,7 @@ options:
 | resetTimeoutOnDuplicate | boolean | false                                                                      | Reset toast timeout on duplicate (preventDuplicates must be true)                                             |
 | includeTitleDuplicates  | boolean | false                                                                      | Include the title of a toast when checking for duplicates (by default only message is compared)               |
 
-##### [](https://www.npmjs.com/package/ngx-toastr#iconclasses-defaults)iconClasses defaults
+##### [iconClasses defaults](https://www.npmjs.com/package/ngx-toastr#iconclasses-defaults)
 
 ```ts
 iconClasses = {
@@ -227,7 +226,7 @@ iconClasses = {
 };
 ```
 
-#### [](https://www.npmjs.com/package/ngx-toastr#setting-global-options)Setting Global Options
+#### [Setting Global Options](https://www.npmjs.com/package/ngx-toastr#setting-global-options)
 
 Pass values to `ToastrModule.forRoot()` or `provideToastr()` to set global options.
 
@@ -262,7 +261,7 @@ bootstrapApplication(AppComponent, {
 });
 ```
 
-### [](https://www.npmjs.com/package/ngx-toastr#toastr-service-methods-return)Toastr Service methods return:
+### [Toastr Service methods return](https://www.npmjs.com/package/ngx-toastr#toastr-service-methods-return):
 
 ```ts
 export interface ActiveToast {
@@ -287,7 +286,7 @@ export interface ActiveToast {
 }
 ```
 
-### [](https://www.npmjs.com/package/ngx-toastr#put-toasts-in-your-own-container)Put toasts in your own container
+### [Put toasts in your own container](https://www.npmjs.com/package/ngx-toastr#put-toasts-in-your-own-container)
 
 Put toasts in a specific div inside your application. This should probably be
 somewhere that doesn't get deleted. Add `ToastContainerModule` to the ngModule
@@ -347,9 +346,9 @@ export class AppComponent implements OnInit {
 }
 ```
 
-## [](https://www.npmjs.com/package/ngx-toastr#functions)Functions
+## [Functions](https://www.npmjs.com/package/ngx-toastr#functions)
 
-##### [](https://www.npmjs.com/package/ngx-toastr#clear)Clear
+##### [Clear](https://www.npmjs.com/package/ngx-toastr#clear)
 
 Remove all or a single toast by optional id
 
@@ -357,7 +356,7 @@ Remove all or a single toast by optional id
 toastrService.clear(toastId?: number);
 ```
 
-##### [](https://www.npmjs.com/package/ngx-toastr#remove)Remove
+##### [Remove](https://www.npmjs.com/package/ngx-toastr#remove)
 
 Remove and destroy a single toast by id
 
@@ -365,7 +364,7 @@ Remove and destroy a single toast by id
 toastrService.remove(toastId: number);
 ```
 
-## [](https://www.npmjs.com/package/ngx-toastr#systemjs)SystemJS
+## [SystemJS](https://www.npmjs.com/package/ngx-toastr#systemjs)
 
 If you are using SystemJS, you should also adjust your configuration to point to
 the UMD bundle.
@@ -379,7 +378,7 @@ map: {
 }
 ```
 
-## [](https://www.npmjs.com/package/ngx-toastr#setup-without-animations)Setup Without Animations
+## [Setup Without Animations](https://www.npmjs.com/package/ngx-toastr#setup-without-animations)
 
 If you do not want to include `@angular/animations` in your project you can
 override the default toast component in the global config to use `ToastNoAnimation` instead of the default one.
@@ -403,7 +402,7 @@ class AppModule {}
 
 That's it! Animations are no longer required.
 
-## [](https://www.npmjs.com/package/ngx-toastr#using-a-custom-toast) Using A Custom Toast
+## [Using A Custom Toast](https://www.npmjs.com/package/ngx-toastr#using-a-custom-toast)
 
 Create your toast component extending Toast see the demo's pink toast for an example [ngx-toastr/src/app/pink.toast.ts at master · scttcper/ngx-toastr · GitHub](https://github.com/scttcper/ngx-toastr/blob/master/src/app/pink.toast.ts)
 
@@ -422,7 +421,7 @@ import { ToastrModule } from 'ngx-toastr';
 class AppModule {}
 ```
 
-## [](https://www.npmjs.com/package/ngx-toastr#faq)FAQ
+## [FAQ](https://www.npmjs.com/package/ngx-toastr#faq)
 
 1. ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it
    was checked  
