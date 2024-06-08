@@ -1,6 +1,8 @@
 ## DEPLOYMENT
 
-Deploying an Angular application involves several steps to ensure that your application is properly deployed and accessible to users. Here's a general outline of the deployment process:
+## CONTENT
+
+- Deploying an Angular application involves several steps to ensure that your application is properly deployed and accessible to users. Here's a general outline of the deployment process:
 
     This command 
 compiles an angular application/library into an output directory named 

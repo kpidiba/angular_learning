@@ -145,7 +145,7 @@ bootstrapApplication(AppComponent, {
 });
 ```
 
-## [](https://www.npmjs.com/package/ngx-toastr#use)Use
+## [Use](https://www.npmjs.com/package/ngx-toastr#use)
 
 ```ts
 import { ToastrService } from 'ngx-toastr';
@@ -160,11 +160,11 @@ export class YourComponent {
 }
 ```
 
-## [](https://www.npmjs.com/package/ngx-toastr#options)Options
+## [Options](https://www.npmjs.com/package/ngx-toastr#options)
 
 There are **individual options** and **global options**.
 
-### [](https://www.npmjs.com/package/ngx-toastr#individual-options)Individual Options
+### [Individual Options](https://www.npmjs.com/package/ngx-toastr#individual-options)
 
 Passed to `ToastrService.success/error/warning/info/show()`
 
@@ -188,7 +188,7 @@ Passed to `ToastrService.success/error/warning/info/show()`
 | tapToDismiss      | boolean                                     | true              | Close on click                                                                                                                                  |
 | onActivateTick    | boolean                                     | false             | Fires `changeDetectorRef.detectChanges()` when activated. Helps show toast from asynchronous events outside of Angular's change detection       |
 
-#### [](https://www.npmjs.com/package/ngx-toastr#setting-individual-options)Setting Individual Options
+#### [Setting Individual Options](https://www.npmjs.com/package/ngx-toastr#setting-individual-options)
 
 success, error, info, warning take `(message, title, ToastConfig)` pass an
 options object to replace any default option.
@@ -826,6 +826,10 @@ npm install sweetalert2 @sweetalert2/ngx-sweetalert2
 | Angular 2       | Try Angular 4 versions requirements, or older versions like @toverux/ngsweetalert2                                                                | unknown                            |
 
 2. INSTALLATION
+
+```bash
+npm install sweetalert2 @sweetalert2/ngx-sweetalert2
+```
 
               **npm install sweetalert2 @sweetalert2/ngx-sweetalert2**
 
