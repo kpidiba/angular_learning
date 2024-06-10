@@ -4,6 +4,8 @@
 
 [SOURCE](https://blent.ai/blog/a/nginx-tout-savoir) 
 
+[INFORMATION](./information.md)
+
 **Nginx** (prononcé *Engine X*) est un serveur web open source et un reverse proxy reconnu pour sa haute performance, sa stabilité et sa capacité à gérer de grandes quantités de trafic web. Créé par Igor Sysoev en 2004, Nginx est devenu l'un des serveurs web les plus populaires et est largement utilisé pour optimiser la livraison web, équilibrer la charge des serveurs et gérer efficacement le trafic réseau.
 
 ### CARACTERISTIQUE
