@@ -70,10 +70,6 @@ npm install ngx-toastr --save
 npm install @angular/animations --save
 ```
 
-Don't want to use `@angular/animations`? See [Setup Without Animations](https://www.npmjs.com/package/ngx-toastr#setup-without-animations).
-
-## [](https://www.npmjs.com/package/ngx-toastr#setup)
-
 **step 1:** add css
 
 - copy [toast css](https://github.com/scttcper/ngx-toastr/blob/HEAD/src/lib/toastr.css) to your project.
@@ -215,7 +211,7 @@ options:
 | resetTimeoutOnDuplicate | boolean | false                                                                      | Reset toast timeout on duplicate (preventDuplicates must be true)                                             |
 | includeTitleDuplicates  | boolean | false                                                                      | Include the title of a toast when checking for duplicates (by default only message is compared)               |
 
-##### [iconClasses defaults](https://www.npmjs.com/package/ngx-toastr#iconclasses-defaults)
+### [IconClasses defaults](https://www.npmjs.com/package/ngx-toastr#iconclasses-defaults)
 
 ```ts
 iconClasses = {
@@ -346,7 +342,7 @@ export class AppComponent implements OnInit {
 }
 ```
 
-## [Functions](https://www.npmjs.com/package/ngx-toastr#functions)
+### [Functions](https://www.npmjs.com/package/ngx-toastr#functions)
 
 ##### [Clear](https://www.npmjs.com/package/ngx-toastr#clear)
 
@@ -378,7 +374,7 @@ map: {
 }
 ```
 
-## [Setup Without Animations](https://www.npmjs.com/package/ngx-toastr#setup-without-animations)
+### [Setup Without Animations](https://www.npmjs.com/package/ngx-toastr#setup-without-animations)
 
 If you do not want to include `@angular/animations` in your project you can
 override the default toast component in the global config to use `ToastNoAnimation` instead of the default one.
@@ -402,7 +398,7 @@ class AppModule {}
 
 That's it! Animations are no longer required.
 
-## [Using A Custom Toast](https://www.npmjs.com/package/ngx-toastr#using-a-custom-toast)
+### [Using A Custom Toast](https://www.npmjs.com/package/ngx-toastr#using-a-custom-toast)
 
 Create your toast component extending Toast see the demo's pink toast for an example [ngx-toastr/src/app/pink.toast.ts at master · scttcper/ngx-toastr · GitHub](https://github.com/scttcper/ngx-toastr/blob/master/src/app/pink.toast.ts)
 
@@ -421,7 +417,7 @@ import { ToastrModule } from 'ngx-toastr';
 class AppModule {}
 ```
 
-## [FAQ](https://www.npmjs.com/package/ngx-toastr#faq)
+### [FAQ](https://www.npmjs.com/package/ngx-toastr#faq)
 
 1. ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it
    was checked  
@@ -854,11 +850,7 @@ export class AppModule {
 
 That's it! By default, SweetAlert2 will be lazy-loaded, only when needed, from your local dependency of `sweetalert2`, using the `import()` syntax under the hood.
 
-## [](https://github.com/sweetalert2/ngx-sweetalert2#link-api)
-
 ## 🔗 API
-
-### [](https://github.com/sweetalert2/ngx-sweetalert2#swaldirective)
 
 ### `SwalDirective`
 
@@ -911,8 +903,6 @@ The directive can also take a reference to a [`<swal>` component](https://github
 
 <swal #deleteSwal title="Delete {{ file.name }}?" etc></swal>
 ```
-
-### [](https://github.com/sweetalert2/ngx-sweetalert2#swalcomponent)
 
 ### `SwalComponent`
 
@@ -970,8 +960,6 @@ export class MyComponent {
 }
 ```
 
-### [](https://github.com/sweetalert2/ngx-sweetalert2#swalportaldirective)
-
 ### `SwalPortalDirective`
 
 The `*swalPortal` structural directive lets you use Angular dynamic templates inside SweetAlerts.
@@ -1027,3 +1015,15 @@ targeting the modal's content (this is the default), and the other one targeting
 ```
 
 We have the following targets: `closeButton`, `title`, `content`, `actions`, `confirmButton`, `cancelButton`, and `footer`.
+
+## CKEDITOR
+
+CKEditor is a powerful rich text editor that allows users to create and edit content with various formatting options, images, tables, and more. It is highly customizable and can be integrated into various web applications to provide a seamless content editing experience.
+
+- **ROLE:** CKEditor serves as a rich text editor, enabling users to write and format content in a user-friendly interface. It is commonly used in content management systems, email clients, and other web applications where rich text editing is required
+
+- **ALTERNATIVES :** summernote,tinyMCE
+
+- **INSTALLATION PROCESS :** [Angular rich text editor component | CKEditor 5 documentation](https://ckeditor.com/docs/ckeditor5/latest/installation/integrations/angular.html)  
+
+- **CUSTOM INTEGRATION: Go here Integrating a build from the online builder**

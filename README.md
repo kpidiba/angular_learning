@@ -53,6 +53,8 @@
 
 - https://www.youtube.com/@GaetanRouzies (French)
 
+- [SimpleTech - YouTube](https://www.youtube.com/@SimpleTechProd) 
+
 ### TEMPLATES
 
 - https://therichpost.com/ 
