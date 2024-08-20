@@ -1,4 +1,4 @@
-## HTTP SERVER
+## HTTP SERVER FOR TESTING
 
 If you need to debug the production build of your Angular app locally, you can use the `http-server` npm package. Here's how:
 
