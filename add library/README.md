@@ -1,4 +1,4 @@
-# # 📚 Angular Libraries
+# 📚 Angular Libraries
 
 A list of popular Angular libraries to enhance your app development:
 
@@ -302,4 +302,66 @@ CKEditor is a powerful rich text editor that allows users to create and edit con
 
 
 
-## APEXCHART
+### 4. **ApexCharts** 📊
+
+[ApexCharts](https://apexcharts.com/) is a modern charting library that helps you to create beautiful and interactive charts.
+
+#### Installation:
+
+```bash
+npm install apexcharts ng-apexcharts --save
+```
+
+#### Configuration:
+
+1. Import `NgApexchartsModule` into your Angular module:
+
+```ts
+import { NgApexchartsModule } from "ng-apexcharts";
+
+@NgModule({
+  imports: [
+    NgApexchartsModule
+  ]
+})
+export class AppModule { }
+
+```
+
+2. Use ApexCharts in your component:
+
+```ts
+import { Component } from '@angular/core';
+import { ChartComponent } from "ng-apexcharts";
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  public chartOptions: any;
+
+  constructor() {
+    this.chartOptions = {
+      chart: {
+        type: 'line'
+      },
+      series: [{
+        name: 'Sales',
+        data: [30, 40, 35, 50, 49, 60, 70]
+      }],
+      xaxis: {
+        categories: ['January', 'February', 'March', 'April', 'May', 'June', 'July']
+      }
+    };
+  }
+}
+
+```
+
+#### Usage Example (in Template):
+
+```html
+<apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"></apx-chart>
+```
