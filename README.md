@@ -101,7 +101,13 @@ cd myProject
 npm install
 ```
 
-## MIGRATION WEBSITE
+## ANGULAR VERSION
+
+## OFFICIAL ANGULAR VERSION LINK
+
+- https://angular.dev/reference/releases 
+
+-  https://angular.dev/reference/versions
 
 - https://update.angular.io/ 
 
