@@ -133,8 +133,6 @@ http {
         }
     }
 }
-
-
 ```
 
 ## Step 4: Start/Restart Nginx
@@ -203,7 +201,6 @@ server {
     server_name localhost;
     return 301 https://$host$request_uri;
 }
-
 ```
 
 **Restart NGINX:**
@@ -216,12 +213,30 @@ sudo systemctl restart nginx
 4. **Access the App:**  
    Visit `https://localhost` (you’ll likely get a browser warning due to the self-signed certificate).
 
-
-
 ## Troubleshooting
 
 - **Nginx not starting:** Check the error logs located in `C:\nginx\logs\error.log` for details on what might be causing the issue.
 - **404 Not Found Errors:** Ensure that the `root` path in your Nginx configuration is correct and points to the directory containing the `index.html` file.
+
+### SECURITY HEADERS
+
+```nginx
+ location / {
+        try_files $uri $uri/ /index.html;
+
+        # 🔐 En-têtes de sécurité
+        add_header X-Frame-Options "DENY" always;
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header X-XSS-Protection "1; mode=block" always;
+        add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+        add_header Referrer-Policy "no-referrer" always;
+        add_header Permissions-Policy "geolocation=(), microphone=(), camera=()" always;
+        add_header Cross-Origin-Opener-Policy "same-origin" always;
+        add_header Cross-Origin-Embedder-Policy "require-corp" always;
+        add_header Cross-Origin-Resource-Policy "same-origin" always;
+        add_header Content-Security-Policy "default-src 'self'; script-src 'self'; object-src 'none';" always;
+    }
+```
 
 ## Conclusion
 
