@@ -1,47 +1,59 @@
-# 📚 Angular Libraries
+# 📚 Angular Frontend Libraries (Enhanced Version)
 
-A list of popular Angular libraries to enhance your app development:
+Popular Angular libraries to improve UI, UX, and development productivity.
 
-- **Bootstrap** 🎨
-- **Material UI** 🎯
-- **Toastr** ✨
-- **SweetAlert** 🌟
-- **CKEDITOR**
-- **APEXCHART**
+## ⭐ Main Libraries Covered
+
+✅ Bootstrap (UI styling)  
+✅ Angular Material (Modern UI components)  
+✅ Toastr (Notifications)  
+✅ SweetAlert2 (Dialogs & Alerts)  
+✅ CKEditor (Rich text editing)  
+✅ ApexCharts (Charts & analytics)
 
 ---
 
-### 1. **Bootstrap** 🎨
+# 🎨 1. Bootstrap
 
-#### Installation:
+### Installation
 
 ```bash
-npm i bootstrap@5.2.3
+npm install bootstrap@5.2.3
 ```
 
-#### Configuration:
+### Configuration
 
-Add the following code to the `angular.json` file:
+Update **angular.json**
 
 ```json
 "styles": [
-  ...
-  "node_modules/bootstrap/dist/css/bootstrap.min.css"
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "src/styles.scss"
 ],
 "scripts": [
   "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-] 
+]
 ```
 
 > **Note:** Restart the server after making these changes. 
 
+👉 Use Bootstrap mainly for:
+
+- Quick layouts
+
+- Responsive grids
+
+- Utility styling
+
 ---
 
-### 2. **Material UI** 🎯
+---
 
-[Angular Material UI component library](https://material.angular.io/guide/getting-started)
+# 🎯 2. Angular Material (Recommended for Modern Angular Apps ⭐)
 
-#### Installation:
+👉 Official Angular UI component library.
+
+### Installation
 
 ```bash
 ng add @angular/material
@@ -49,115 +61,114 @@ ng add @angular/material
 
 > **Material Icons**: You can access them from [Google Material Icons](https://fonts.google.com/icons). 
 
+You will be prompted to choose:
+
+- Theme
+
+- Typography
+
+- Animations
+
+👉 Material Icons
+
+```html
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+```
+
+Use Material when you need:
+
+- Professional enterprise UI
+
+- Consistent design system
+
 ---
 
-### 3. **Toastr** ✨
+---
 
-[ngx-toastr package](https://www.npmjs.com/package/ngx-toastr)
+# ✨ 3. Toastr Notifications (ngx-toastr)
 
-#### Installation:
-
-```shell
-npm install ngx-toastr --save
-```
-
-`@angular/animations` package is a required dependency for the default toast
+## Installation
 
 ```shell
-npm install @angular/animations --save
+npm install ngx-toastr @angular/animations
 ```
 
-#### Step 1: Add CSS
+---
 
-- Copy [toast css](https://github.com/scttcper/ngx-toastr/blob/HEAD/src/lib/toastr.css) into your project.
-- If you use Sass, you can import the CSS.
+## Add Styles
 
-For regular toasts:
+In **angular.json**
+
+```shell
+"styles": [
+  "node_modules/ngx-toastr/toastr.css",
+  "src/styles.scss"
+]
+```
+
+---
+
+## Configure Module
+
+### Module-based projects
 
 ```css
-@import 'ngx-toastr/toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
+@NgModule({
+ imports: [
+   BrowserAnimationsModule,
+   ToastrModule.forRoot()
+ ]
+})
+export class AppModule {}
 ```
 
-For Bootstrap-styled toasts:
+---
 
-```css
-@import 'ngx-toastr/toastr-bs4-alert';  // Bootstrap 4
-@import 'ngx-toastr/toastr-bs5-alert';  // Bootstrap 5
-```
+### Standalone Angular (Modern approach ⭐)
 
 If you are using Angular CLI, add the CSS to the `angular.json` file:
 
 ```json
-"styles": [
-  "styles.scss",
-  "node_modules/ngx-toastr/toastr.css"
-]
-```
-
-#### Step 2: Add ToastrModule
-
-##### Module-based Configuration:
-
-```ts
-import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { ToastrModule } from 'ngx-toastr';
-
-@NgModule({
-  imports: [
-    CommonModule,
-    BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), // ToastrModule added
-  ],
-  bootstrap: [App],
-  declarations: [App],
-})
-class MainModule {}
-```
-
-##### Standalone Configuration:
-
-```ts
-import { AppComponent } from './src/app.component';
-import { provideAnimations } from '@angular/platform-browser/animations';
-
-import { provideToastr } from 'ngx-toastr';
-
 bootstrapApplication(AppComponent, {
-  providers: [
-    provideAnimations(), // required animations providers
-    provideToastr(), // Toastr providers
-  ]
+ providers: [
+   provideAnimations(),
+   provideToastr()
+ ]
 });
 ```
 
-###### Usage Example:
+---
+
+## Usage
 
 ```ts
-import { ToastrService } from 'ngx-toastr';
+constructor(private toastr: ToastrService) {}
 
-@Component({...})
-export class YourComponent {
-  constructor(private toastr: ToastrService) {}
-
-  showSuccess() {
-    this.toastr.success('Hello world!', 'Toastr fun!');
-  }
+showSuccess(){
+ this.toastr.success('Operation completed');
 }
 ```
+
+---
+
+# 🌟 4. SweetAlert2 (Modern Alert Modals)
+
+## Installation
 
 
 
 # Angular and SweetAlert2
 
-**INSTALLATION**
+**INSTALLATION** **<mark>(just install and use one)</mark>**
 
 ```bash
 npm install sweetalert2 @sweetalert2/ngx-sweetalert2
 ```
 
-              **npm install sweetalert2 @sweetalert2/ngx-sweetalert2**
+### Module Setupts
 
 ```ts
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
@@ -300,8 +311,6 @@ CKEditor is a powerful rich text editor that allows users to create and edit con
 
 - **CUSTOM INTEGRATION: Go here Integrating a build from the online builder**
 
-
-
 ### 4. **ApexCharts** 📊
 
 [ApexCharts](https://apexcharts.com/) is a modern charting library that helps you to create beautiful and interactive charts.
@@ -325,7 +334,6 @@ import { NgApexchartsModule } from "ng-apexcharts";
   ]
 })
 export class AppModule { }
-
 ```
 
 2. Use ApexCharts in your component:
@@ -357,7 +365,6 @@ export class AppComponent {
     };
   }
 }
-
 ```
 
 #### Usage Example (in Template):
