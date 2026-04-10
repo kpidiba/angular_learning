@@ -55,7 +55,7 @@ server {
     listen 80;
     server_name your_domain_or_ip;
 
-    root C:/p`ath/to/your/angular/project/dist/your-project-name;
+    root C:/path/to/your/angular/project/dist/your-project-name;
 
     index index.html;
 
